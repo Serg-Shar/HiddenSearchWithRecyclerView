@@ -56,6 +56,8 @@ class SimpleAdapter(private val arrayOfStrings: List<String>) : RecyclerView.Ada
 
         fun bind(value: String) {
             this.itemView.findViewById<TextView>(R.id.simple_text).text = value
+
+            itemView.setOnClickListener { println("Click on $value -- $this $itemView") }
         }
     }
 }
